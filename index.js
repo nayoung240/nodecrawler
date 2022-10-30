@@ -23,9 +23,7 @@ app.get('/home', function(request, response) {
             ulList[i] = {
                 title: $(this).find('.api_txt_lines').text(),
                 url: $(this).find('.api_txt_lines').attr('href'),
-                //   image_url: $(this).find('p.poto a img').attr('src'),
-                //   image_alt: $(this).find('p.poto a img').attr('alt'),
-                //   summary: $(this).find('p.lead').text().slice(0, -11),
+                image_url: $(this).find('.api_get').attr('src'),
                 date: $(this).find('.sub_time').text()
             };
         });
@@ -34,7 +32,7 @@ app.get('/home', function(request, response) {
         return data;
     })
     .then(res => {
-        log(res)
+        // log(res)
         response.send(res)
     })
 })
