@@ -1,5 +1,10 @@
 # nodecrawler
 
+## 개발환경
+- axios
+- cheerio
+- express
+- nodemon
 
 ## 서버 실행
 ```
